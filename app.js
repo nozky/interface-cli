@@ -3,7 +3,7 @@
 // require 
 const {calcProcess} = require('./utils/calc.js')
 
-// Get from process.argv
+// Variables
 let operator
 let operand1 
 let operand2 
@@ -17,6 +17,7 @@ const rl = readline.createInterface({
   output: process.stdout
 })
 
+// I use promise, so i can use this asynchronous
 const question1 = () => {
   return new Promise((resolve, reject) => {
     rl.question('Operator? ', (answer) => {
@@ -44,7 +45,7 @@ const question3 = () => {
   })
 }
 
-
+// async/await 
 const start = async () => {
   await question1()
   await question2()
@@ -55,6 +56,7 @@ const start = async () => {
  console.log(`Result = ${result}`)
 }
 
+// run
 start()
 
 // TODO: make this some kind of a class, so we can reuse this easily

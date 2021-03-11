@@ -57,4 +57,4 @@ const start = async () => {
 
 start()
 
-// TOTO: make this some kind of a class, so we can reuse this easily
+// TODO: make this some kind of a class, so we can reuse this easily
